@@ -1,0 +1,14 @@
+name: build-deploy-parcel
+run-name: Build and Deploy with Parcel
+on:
+  push:
+    branches:
+      new
+
+jobs:
+  build_app:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Checkout code
+          uses: actions/checkout
