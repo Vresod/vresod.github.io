@@ -1,12 +1,11 @@
 {
   "name": "vresod.github.io",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "start": "parcel serve src/index.html --public-url / --dist-dir dist",
-    "build": "parcel build --dist-dir dist",
+    "build": "parcel build src/index.html --public-url / --dist-dir dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npm build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
