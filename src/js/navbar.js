@@ -1,12 +1,8 @@
 import fs from "fs";
 import path from "path";
+import navbar_code from 'bundle-text:../navbar.html'
 
 let insert_navbar = () => {
-	// uses some parcel funny business to insert the navbar
-	let navbar_code = fs.readFileSync(path.join(__dirname, "../navbar.html"), 'utf8');
-	const logo_url = new URL("../assets/fullsize_icon.png", import.meta.url);
-	console.log(logo_url);
-	navbar_code = navbar_code.replace('assets/fullsize_icon.png', logo_url.pathname);
 	let navbar_div = document.querySelector("div#insert_navbar");
 	navbar_div.outerHTML = navbar_code;
 }
