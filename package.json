@@ -4,8 +4,7 @@
   "scripts": {
     "start": "parcel serve src/index.html --public-url / --dist-dir dist",
     "build": "parcel build src/index.html --public-url / --dist-dir dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d dist --cname vresod.xyz --nojekyll"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
