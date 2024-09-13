@@ -1,5 +1,3 @@
-@import "node_modules/bootstrap/scss/bootstrap";
+$color-mode-type: media-query;
 
-// h1,h2,h3 {
-// 	// text-align: center;
-// }
+@import "node_modules/bootstrap/scss/bootstrap";

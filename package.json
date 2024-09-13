@@ -4,6 +4,7 @@
   "scripts": {
     "start": "parcel serve src/index.html --public-url / --dist-dir dist",
     "build": "parcel build src/index.html --public-url / --dist-dir dist",
+    "clean": "rm dist/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,7 +19,8 @@
     "path-browserify": "^1.0.1",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^2.0.1",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "sharp": "^0.31.3"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
