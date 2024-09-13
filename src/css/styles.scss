@@ -1,3 +1,12 @@
 $color-mode-type: media-query;
 
 @import "node_modules/bootstrap/scss/bootstrap";
+
+@include color-mode(light) {
+
+	// light mode specific styles
+	.sm-logo {
+		// invert social media logos in light mode
+		filter: invert(1);
+	}
+}

@@ -26,14 +26,25 @@
 	<title>vresod.xyz</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 	<!--posthtml stuff is based on the root of the repo-->
 	<include src="src/navbar.html"></include>
 
-	<main class="container-lg">
-		<h1>Awesome website</h1>
-		<p>&#128031; Yeah I'll fill this in later with like experience or whatever</p>
+	<main class="container-fluid">
+		<div class="mx-auto container bg-body-secondary text-center my-5 py-5 border border-3">
+			<h1>Luke Binkofsky</h1>
+			<hr>
+			<p>Who is he? What does he do? What are his plans for the future?</p>
+		</div>
 	</main>
+	<footer class="container-fluid bg-body-tertiary border-top border-1 mt-auto">
+		<div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-5">
+			<div class="container-fluid">
+				<img src="assets/github_logo.svg" class="sm-logo" width="32">
+				<img src="assets/linkedin_logo.png?width=32" class="sm-logo" width="32">
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>
