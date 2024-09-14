@@ -18,3 +18,11 @@ $color-mode-type: media-query;
 i {
 	width: 1em;
 }
+
+.cow {
+	transition: transform .5s;
+}
+
+.rotated {
+	transform: rotate(360deg);
+}
