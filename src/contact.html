@@ -23,14 +23,47 @@
 	<link rel="apple-touch-icon" href="assets/icon.png" type="image/png">
 	<script type="module" src="js/main.js"></script>
 	<script type="module" src="js/navbar.js"></script>
+	<script type="module" src="js/contact.js"></script>
+
 	<title>Contact Me - vresod.xyz</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 	<include src="src/navbar.html"></include>
-	<main class="container-lg">
-		<h1>Contact Me.... NOW!</h1>
+
+	<main class="container-fluid">
+		<header class="container text-center my-5">
+			<h1>I can be contacted via the following services:</h1>
+		</header>
+		<div class="container px-5 text-center">
+			<div class="row">
+				<div class="col card mx-2">
+					<div class="card-body">
+						<h2 class="card-title">Discord</h2>
+						<p class="card-text">In most cases, Discord is the most fastest way to contact me.</p>
+						<span data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Copy username"
+							class="d-inline-block">
+							<button class="btn btn-primary copy-button" data-vd-copy="Vresod">My username is
+								@Vresod</button>
+						</span>
+					</div>
+				</div>
+				<div class="col card mx-2">
+					<div class="card-body">
+						<h2 class="card-title">Email</h2>
+						<p class="card-text">I would prefer most professional contact goes through here.</p>
+						<span data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Copy username"
+							class="d-inline-block">
+							<a class="btn btn-primary copy-button" href="mailto:binkofskyluke@proton.me">Email me at
+								binkofskyluke@proton.me</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
+
+	<include src="src/footer.html"></include>
 </body>
 
 </html>
