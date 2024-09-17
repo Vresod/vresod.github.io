@@ -4,7 +4,7 @@ let select_active_page = () => {
 	*/
 	let navlinks = document.querySelectorAll("a.nav-link");
 	navlinks.forEach(link => {
-		if (link.href == document.location.href) {
+		if (link.href === document.location.href) {
 			link.classList.add("active");
 			link.ariaCurrent = "page";
 		}
