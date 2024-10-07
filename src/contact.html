@@ -30,6 +30,49 @@
 <body class="d-flex flex-column min-vh-100">
 	<include src="src/navbar.html"></include>
 
+	<!--Contact form modal, activated by button below-->
+	<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<form action="https://api.vresod.xyz" method="post">
+					<div class="modal-header">
+						<h1 class="modal-title fs-3">Contact Form</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row g-2 mb-2">
+							<div class="col">
+								<div class="form-floating">
+									<input type="text" class="form-control" id="name" placeholder="N/A" name="name">
+									<label for="name" class="form-label">Name:</label>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-floating">
+									<input type="email" class="form-control" id="replyto" placeholder="N/A"
+										name="replyto">
+									<label for="replyto" class="form-label">Email address:</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-floating">
+									<textarea type="text" class="form-control input-lg" id="body" placeholder="N/A"
+										style="height:20em;resize:none;" name="body"></textarea>
+									<label for="body" class="form-label">Message:</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn btn-primary">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<main class="container-fluid">
 		<header class="text-center my-5">
 			<h1>I can be contacted via the following services:</h1>
@@ -50,8 +93,8 @@
 				<div class="card-body">
 					<h2 class="card-title"><i class="bi bi-envelope-fill"></i> Email</h2>
 					<p class="card-text">I would prefer most professional contact goes through here.</p>
-					<a class="btn btn-primary" href="mailto:binkofskyluke@proton.me" target="_blank">Email me at
-						binkofskyluke@proton.me</button>
+					<btn class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactFormModal">Open contact
+						form</button>
 				</div>
 			</div>
 		</div>
