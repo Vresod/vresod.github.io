@@ -1,11 +1,6 @@
 import * as bootstrap from "bootstrap"
 
-(() => {
-	// copied DIRECTLY from the bootstrap docs
-	const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-	const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
-
-	// my turn now
+let setupCopyButtons = () => {
 	let copyButtons = document.querySelectorAll(".copy-button");
 	copyButtons.forEach(button => {
 		let parent = button.parentElement;
@@ -23,4 +18,32 @@ import * as bootstrap from "bootstrap"
 			});
 		})
 	});
+};
+
+let contactFormSubmit = e => {
+	const contactForm = document.querySelector("#contact-form")
+	e.preventDefault(); // prevents page from reloading on submit
+	let data = new URLSearchParams(new FormData(contactForm));
+	try {
+		fetch("https://api.vresod.xyz", {
+			"method": "POST",
+			"body": data,
+		}).then(async response => {
+			console.log(await response.json())
+		})
+	}
+	catch (error) {
+		console.error(error.message);
+	}
+}
+
+(() => {
+	// copied DIRECTLY from the bootstrap docs
+	const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+	const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+	const contactForm = document.querySelector("#contact-form")
+	// my turn now
+	setupCopyButtons();
+	contactForm.addEventListener("submit", contactFormSubmit)
+
 })();
