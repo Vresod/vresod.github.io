@@ -33,43 +33,48 @@
 	<!--Contact form modal, activated by button below-->
 	<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel">
 		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<form id="contact-form">
-					<div class="modal-header">
-						<h1 class="modal-title fs-3">Contact Form</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="row g-2 mb-2">
-							<div class="col">
-								<div class="form-floating">
-									<input type="text" class="form-control" id="name" placeholder="N/A" name="name">
-									<label for="name" class="form-label">Name:</label>
-								</div>
-							</div>
-							<div class="col">
-								<div class="form-floating">
-									<input type="email" class="form-control" id="replyto" placeholder="N/A"
-										name="replyto">
-									<label for="replyto" class="form-label">Email address:</label>
-								</div>
+			<form class="modal-content" id="contact-form">
+				<div class="modal-header">
+					<h1 class="modal-title fs-3">Contact Form</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row g-2 mb-2">
+						<div class="col">
+							<div class="form-floating">
+								<input type="text" class="form-control" id="name" placeholder="N/A" name="name"
+									required>
+								<label for="name" class="form-label">Name:</label>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col">
-								<div class="form-floating">
-									<textarea type="text" class="form-control input-lg" id="body" placeholder="N/A"
-										style="height:20em;resize:none;" name="body"></textarea>
-									<label for="body" class="form-label">Message:</label>
-								</div>
+						<div class="col">
+							<div class="form-floating">
+								<input type="email" class="form-control" id="replyto" placeholder="N/A" name="replyto"
+									required>
+								<label for="replyto" class="form-label">Email address:</label>
 							</div>
 						</div>
 					</div>
-					<div class="modal-footer">
+					<div class="row">
+						<div class="col">
+							<div class="form-floating">
+								<textarea type="text" class="form-control input-lg" id="body" placeholder="N/A"
+									style="height:20em;resize:none;" name="body" required></textarea>
+								<label for="body" class="form-label">Message body:</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer justify-content-between align-items-center">
+					<div class="align-items-center me-auto">
+						<p class="fade border border-success text-success p-2 my-auto"
+							style="border-style: dashed !important;" id="form-success-indicator">Big success!!</p>
+					</div>
+					<div class="text-end justify-content-end ms-auto my-auto">
 						<input type="submit" class="btn btn-primary" id="form-submit-button">
 					</div>
-				</form>
-			</div>
+				</div>
+			</form>
 		</div>
 	</div>
 

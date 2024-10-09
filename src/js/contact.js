@@ -21,7 +21,8 @@ let setupCopyButtons = () => {
 };
 
 let contactFormSubmit = e => {
-	const contactForm = document.querySelector("#contact-form")
+	const contactForm = document.querySelector("#contact-form");
+	const successIndicator = document.querySelector("#form-success-indicator");
 	e.preventDefault(); // prevents page from reloading on submit
 	let data = new URLSearchParams(new FormData(contactForm));
 	try {
@@ -29,7 +30,19 @@ let contactFormSubmit = e => {
 			"method": "POST",
 			"body": data,
 		}).then(async response => {
-			console.log(await response.json())
+			// Let the user know the email was sent, or that it wasn't
+			let json = await response.json()
+			successIndicator.classList.remove("border-success", "text-success")
+			successIndicator.classList.remove("border-danger", "text-danger")
+			if (!response.ok) {
+				console.error(json);
+				successIndicator.classList.add("border-danger", "text-danger")
+				successIndicator.textContent = json.error.message || json.response || response.status;
+			} else {
+				successIndicator.classList.add("border-success", "text-success")
+				successIndicator.textContent = "Email sent successfully!"
+			}
+			successIndicator.classList.add("show")
 		})
 	}
 	catch (error) {
@@ -41,9 +54,9 @@ let contactFormSubmit = e => {
 	// copied DIRECTLY from the bootstrap docs
 	const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
 	const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
-	const contactForm = document.querySelector("#contact-form")
 	// my turn now
+	const contactForm = document.querySelector("#contact-form");
 	setupCopyButtons();
-	contactForm.addEventListener("submit", contactFormSubmit)
+	contactForm.addEventListener("submit", contactFormSubmit);
 
 })();
