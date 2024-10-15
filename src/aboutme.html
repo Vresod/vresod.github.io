@@ -27,9 +27,13 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-	<include src="src/navbar.html"></include>
+	<include src="src/navbar.html">
+		{
+		"root": "./"
+		}
+	</include>
 	<main class="container text-center">
-		<div class="py-5 px-3 my-5 rounded-3 shadow-lg border border-3">
+		<div class="py-5 px-3 my-5 rounded-3 shadow-lg border border-4">
 			<h1>Hey, I'm Luke!</h1>
 			<h6>also known as Vresod</h6>
 			<hr>
@@ -37,9 +41,16 @@
 			<p>Throughout the years I have also found myself interested in tons of other topics, including video
 				production, web design, game dev and design, and mechanical engineering.</p>
 		</div>
+		<hr>
+		<div class="py-4 px-3 my-5 rounded-3 shadow-lg border border-3">
+			<h3>I currently drive a 2008 Honda Accord Coupe EX-L V6 with a 6-speed manual transmission.</h3>
+			<p>It is absolutely bone-stock; this is pretty much my dream car. The only features I'd want that it doesn't
+				have are a backup camera and CarPlay, neither of which are killer features, especially in a 2008.</p>
+			<p>Read more about it <a href="./aboutme/cars.html" class="link">here.</a></p>
+		</div>
 	</main>
 
-	<include src="src/footer.html"></include>
+	<include src="src/footer.html"> { "root": "./" } </include>
 </body>
 
 </html>

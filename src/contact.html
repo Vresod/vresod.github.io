@@ -28,7 +28,11 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-	<include src="src/navbar.html"></include>
+	<include src="src/navbar.html">
+		{
+		"root": "./"
+		}
+	</include>
 
 	<!--Contact form modal, activated by button below-->
 	<div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel">
@@ -113,7 +117,7 @@
 		</div>
 	</main>
 
-	<include src="src/footer.html"></include>
+	<include src="src/footer.html"> { "root": "./" } </include>
 </body>
 
 </html>

@@ -27,10 +27,10 @@
 
 <body class="d-flex flex-column min-vh-100">
 	<!--posthtml stuff is based on the root of the repo-->
-	<include src="src/navbar.html"></include>
+	<include src="src/navbar.html"> { "root": "./" } </include>
 
 	<main class="text-center">
-		<div class="mx-auto container rounded shadow-lg my-5 py-5 px-4 border border-3">
+		<div class="mx-auto container rounded shadow-lg my-5 py-5 px-4 border border-4">
 			<!-- first "card" -->
 			<h1>Hey! Thanks for checking out my website!</h1>
 			<hr>
@@ -38,7 +38,7 @@
 		</div>
 	</main>
 
-	<include src="src/footer.html"></include>
+	<include src="src/footer.html"> { "root": "./" } </include>
 </body>
 
 </html>
