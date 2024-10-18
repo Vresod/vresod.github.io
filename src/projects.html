@@ -19,7 +19,7 @@
 	<meta property="og:image" content="https://github.com/Vresod.png?size=48">
 
 	<link rel="stylesheet" href="css/styles.scss">
-	<link rel="shortcut icon" href="assets/icon.png?width=128" type="image/png">
+	<link rel="shortcut icon" href="assets/favicon.png" type="image/png">
 	<link rel="apple-touch-icon" href="assets/icon.png" type="image/png">
 	<script type="module" src="js/main.js" async></script>
 
@@ -28,11 +28,7 @@
 
 <body class="d-flex flex-column min-vh-100">
 	<!--posthtml stuff is based on the root of the repo-->
-	<include src="src/navbar.html">
-		{
-		"root": "./"
-		}
-	</include>
+	<include src="navbar.html"> { "root": "./" } </include>
 
 	<main class="container-fluid text-center">
 		<header class="my-5">
@@ -68,7 +64,7 @@
 		</div>
 	</main>
 
-	<include src="src/footer.html"> { "root": "./" } </include>
+	<include src="footer.html"> { "root": "./" } </include>
 </body>
 
 </html>
