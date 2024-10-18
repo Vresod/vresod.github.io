@@ -3,7 +3,7 @@ let select_active_page = () => {
 	* Grabs the navbar link that corresponds to the currently active page and activates it
 	*/
 	let navlinks = document.querySelectorAll("a.nav-link, a.dropdown-item");
-	for (link of navlinks) {
+	for (let link of navlinks) {
 		if (link.href != document.location.href) {
 			continue;
 		}
