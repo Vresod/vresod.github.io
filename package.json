@@ -2,16 +2,18 @@
   "name": "vresod.github.io",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel serve src/index.html --public-url / --dist-dir dist",
-    "build": "parcel build src/index.html --public-url / --dist-dir dist",
+    "start": "vite",
+    "build": "exit 1",
     "clean": "rm dist/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "type": "module",
   "author": "",
   "license": "MIT",
   "description": "",
   "devDependencies": {
+    "@vituum/vite-plugin-posthtml": "^1.1.0",
     "path-browserify": "^1.0.1",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^2.0.1",
