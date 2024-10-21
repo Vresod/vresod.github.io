@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "vite",
-    "build": "exit 1",
+    "build": "vite build",
     "clean": "rm dist/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,13 +14,11 @@
   "description": "",
   "devDependencies": {
     "@vituum/vite-plugin-posthtml": "^1.1.0",
-    "path-browserify": "^1.0.1",
     "posthtml-doctype": "^1.1.1",
     "posthtml-include": "^2.0.1",
-    "process": "^0.11.10",
-    "sass": "^1.80.2",
-    "sharp": "^0.31.3",
-    "vite": "^5.4.9"
+    "sass": "^1.80.3",
+    "vite": "^5.4.9",
+    "vituum": "^1.1.1"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
