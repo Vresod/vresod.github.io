@@ -8,7 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "author": "Vresod",
   "license": "MIT",
   "description": "",
   "devDependencies": {

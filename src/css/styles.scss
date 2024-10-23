@@ -26,3 +26,8 @@ i {
 .rotated {
 	transform: rotate(360deg);
 }
+
+.text-balancewrap {
+	// balance is a relatively new feature, there's no real negative repercussion to it not existing other than the page looking a little uglier
+	text-wrap: balance;
+}
