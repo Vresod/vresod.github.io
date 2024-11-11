@@ -23,11 +23,19 @@ let select_active_page = () => {
 (() => { // this is the normal way of doing it but it feels like I'm writing lisp
 	select_active_page();
 	let cow = document.querySelector(".cow");
-	let click_count = 0;
+	cow.click_count = 0;
+	let hamburger = document.querySelector(".hamburger");
+	hamburger.click_count = 0;
 	cow.addEventListener("click", () => {
-		click_count++;
-		if (click_count % 5 == 0) {
+		cow.click_count++;
+		if (cow.click_count % 5 == 0) {
 			cow.classList.toggle("rotated")
+		}
+	});
+	hamburger.addEventListener("click", () => {
+		hamburger.click_count++;
+		if (hamburger.click_count >= 15) {
+			hamburger.classList.add("burger-activated");
 		}
 	})
 })();

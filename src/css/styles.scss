@@ -27,6 +27,11 @@ i {
 	transform: rotate(360deg);
 }
 
+
+.hamburger.burger-activated {
+	background-image: url("/src/assets/hamburger.png?width=64");
+}
+
 .text-balancewrap {
 	// balance is a relatively new feature, there's no real negative repercussion to it not existing other than the page looking a little uglier
 	text-wrap: balance;
