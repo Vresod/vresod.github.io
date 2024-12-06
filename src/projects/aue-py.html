@@ -6,18 +6,49 @@
 		<!--include tags used in every file-->
 	</include>
 	<!--social media embed tags and SEO-->
-	<meta property="og:title" content="vresod.xyz">
+	<meta name="description" content="Among Us Editor - Python page for Luke Binkofsky, also known as Vresod">
+	<meta name="keywords" content="vresod professional portfolio resume binkofsky project among-us python">
+	<link rel="canonical" content="https://vresod.xyz/projects/aue-py.html">
+	<meta property="og:title" content="Among Us Editor (Python) - Projects - vresod.xyz">
+	<meta property="og:url" content="https://vresod.xyz/aboutme/certfications.html">
 
-	<title>Placeholder - vresod.xyz</title>
+	<title>Among Us Editor (Python) - Projects - vresod.xyz</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 	<!--posthtml stuff is based on the root of the repo-->
 	<include src="src/templates/navbar.html"></include>
 
-	<main class="text-center">
-		<div class="mx-auto container rounded shadow-lg my-5 py-5 px-4 border border-4">
-			<h1>This page is a placeholder</h1>
+	<main class="text-center container-fluid">
+		<header class="my-5">
+			<h1>Among Us Editor - Python</h1>
+		</header>
+		<div class="container-lg rounded shadow-lg my-5 py-3 px-4 border border-4">
+			<h3>This was a project I took on in the wake of the popularity of the hit game, Among Us.</h3>
+			<p>It acted as a way to modify your game's files without the restrictions in-game; for example, there are
+				certain cosmetic items that were locked behind limited time events, but were made usable by everyone
+				using this tool.</p>
+			<p>It also acted as a way to use server settings beyond the limits of the game, like super-fast movement or
+				very limited visibility.</p>
+			<p>It was based on a very similar project by <a href="https://github.com/Koupah">Koupah</a>, also called <a
+					href="https://github.com/Koupah/Among-Us-Editor">Among Us Editor</a>; the primary difference being
+				that his was written in Java using Swing, while mine was written in Python using PySimpleGUI.</p>
+			<p>The project unfortunately no longer functions; it hasn't been updated since November 2021, and in that
+				time, Innersloth has updated the data scheme for the save file. It was, however, a great excercise in
+				GUI development and data structuring.</p>
+			<div class="d-flex flex-wrap justify-content-center">
+				<div class="card mx-2 my-2 shadow-lg rounded border-3" style="max-width: 30rem;">
+					<img src="/src/assets/projects/aue_py_img.png" class="card-img-top"
+						alt="Screenshot of my project, Not-DDG-Bangs">
+					<div class="card-body">
+						<div>
+							<h2 class="card-title"><i class="bi bi-filetype-py"></i> Among Us Editor - Python</h2>
+							<a href="https://github.com/Vresod/Among-Us-Editor-Python" class="btn btn-primary">Source
+								code</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 
