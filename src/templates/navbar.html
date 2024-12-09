@@ -1,7 +1,15 @@
+<!--importing script inside the template looks very clean-->
 <script type="module" src="/src/js/navbar.js" async></script>
 <nav class="navbar navbar-expand-sm bg-body-tertiary border-bottom border-1">
+	<!--
+	Bootstrap navbars are kind of messy; basically you have to create a structure of list items and divs with certain
+	classes. Generally it goes:
+	nav.navbar > .container-fluid > .navbar-collapse > ul.navbar-nav > li.nav-item > a.nav-link
+	unless there's a dropdown, where instead it goes:
+	li.nav-item.dropdown > .nav-link .dropdown-menu > li > .dropdown-item
+	-->
 	<div class="container-fluid">
-		<span class="navbar-brand ">
+		<span class="navbar-brand">
 			<img class="d-inline-block align-text-top cow" src="/src/assets/icon.png?width=48" width="32"
 				alt="Minecraft cow image, representing a logo for Vresod">
 			Vresod
@@ -10,6 +18,7 @@
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon hamburger"></span>
 		</button>
+		<!--VVVVV Navbar content starts here VVVVV-->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-sm-0">
 				<li class="nav-item">
@@ -26,7 +35,6 @@
 						<li><a class="dropdown-item" href="/src/aboutme/cars.html">Cars</a></li>
 						<li><a class="dropdown-item" href="/src/aboutme/certifications.html">Certifications</a></li>
 					</ul>
-					<!-- <a class="nav-link" href="/src/aboutme.html">About Me</a> -->
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -41,11 +49,7 @@
 						<li><a class="dropdown-item" href="/src/projects/not-ddg-bangs.html">Not DDG Bangs</a>
 						</li>
 					</ul>
-					<!-- <a class="nav-link" href="/src/aboutme.html">About Me</a> -->
 				</li>
-				<!-- <li class="nav-item">
-					<a class="nav-link" href="/src/projects.html">Projects</a>
-				</li> -->
 				<li class="nav-item">
 					<a class="nav-link" href="/src/contact.html">Contact</a>
 				</li>
