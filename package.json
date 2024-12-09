@@ -13,7 +13,9 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
+    "@parcel/packager-xml": "^2.13.2",
     "@parcel/transformer-sass": "^2.13.2",
+    "@parcel/transformer-xml": "^2.13.2",
     "parcel": "^2.13.2",
     "posthtml-include": "^2.0.1",
     "sharp": "^0.33.5",
