@@ -26,7 +26,21 @@
 		</header>
 		<div class="container-lg rounded shadow-lg my-5 py-3 px-4 border border-4">
 			<h3>This project is a reimplementation of DuckDuckGo's "bangs" feature.</h3>
-			<p></p>
+			<sub><a href="https://duckduckgo.com/bangs">See DuckDuckGo's page on bangs</a></sub>
+			<hr>
+			<p>This project came about as a way to add custom bangs to DuckDuckGo. They do have their own method of
+				submitting them, but they have a review process, and various requirements&mdash; most notably, general
+				usefulness. I wanted to quickly add some that could potentially be useful to me, and me alone.</p>
+			<p>There were two different iterations of this project; one was written as a backend/frontend application in
+				Python using Flask, and the other was written to run on GitHub Pages using JavaScript. The python-based
+				one is no longer actively developed; it was built to use Herkou's free tier, before that got shut down.
+			</p>
+			<p>The modern, JS-based implementation is usable at <a
+					href="https://not-ddg-bangs.vresod.xyz">https://not-ddg-bangs.vresod.xyz</a>. The source code is a
+				little messy, as it is mostly directly ported it from Python, without regard for how "pythonisms" would
+				appear in JavaScript. The UI is also very functional; I figured having a simple design would allow for a
+				better codebase behind it. Overall, this project was my first major foray into JavaScript, and one of my
+				first in web development, and something I still find useful daily.</p>
 			<div class="d-flex flex-wrap justify-content-center">
 				<div class="card mx-2 my-2 shadow-lg rounded border-3" style="max-width: 30rem;">
 					<img src="/src/assets/projects/not_ddg_bangs_img.png" class="card-img-top"
