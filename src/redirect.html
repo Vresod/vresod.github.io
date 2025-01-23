@@ -1,0 +1,45 @@
+https://www.youtube.com/watch?v=7s4MmXFYduw
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<include src="src/templates/common_head_tags.html">
+		<!--include tags used in every file-->
+	</include>
+	<!--social media embed tags and SEO-->
+	<meta property="og:title" content="vresod.xyz">
+	<meta name="robots" content="noindex">
+
+	<title>vresod.xyz</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+	<!--posthtml stuff is based on the root of the repo-->
+	<include src="src/templates/navbar.html"></include>
+
+	<main class="text-center">
+		<div class="mx-auto container rounded shadow-lg my-5 py-5 px-4 border border-4">
+			<!-- first "card" -->
+			<h1>Redirecting in <span id="number">5</span><span id="ellipsis">...</span></h1>
+		</div>
+	</main>
+
+	<include src="src/templates/footer.html"></include>
+	<script>
+		let ellipsis = document.querySelector("#ellipsis");
+		let number = document.querySelector("#number");
+		let ellipsisCount = 3;
+		let seconds = 5;
+		setInterval(() => {
+			ellipsis.innerHTML = ".".repeat((ellipsisCount++ % 3) + 1);
+		}, 333);
+		setInterval(() => {
+			number.innerHTML = seconds;
+			if (seconds-- <= 0) {
+				location.replace("https://www.youtube.com/watch?v=7s4MmXFYduw")
+			}
+		}, 1000)
+	</script>
+</body>
+
+</html>
